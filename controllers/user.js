@@ -4,6 +4,7 @@ const createUser = async (req, res, next) => {
   try {
     const { name, email } = req.body;
     if (!name || !email) {
+      console.log("api got hit")
       res.status(400);
       return next(new Error("name & email fields are required"));
     }
