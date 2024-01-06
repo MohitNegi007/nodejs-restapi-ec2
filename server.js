@@ -28,6 +28,14 @@ app.use("/api/products", (req, res) => {
   })
 });
 
+app.use('/api/live', (req, res) => {
+  // Your HTML code
+  const htmlCode = '<html><body><h1>Hello, this is HTML response!</h1></body></html>';
+
+  // Send HTML as a response
+  res.send(htmlCode);
+});
+
 app.use(errorHandler);
 
 const server = app.listen(port, () =>
